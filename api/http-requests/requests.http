@@ -1,0 +1,25 @@
+###
+POST http://localhost:8080/25-3-2023%20nutribarf/public_html/api/prueba HTTP/1.1
+content-type: application/json
+
+{
+    "ejemplo": "sample",
+}
+
+
+
+
+###
+GET http://localhost:8080/25-3-2023%20nutribarf/public_html/api/getAllUsers HTTP/1.1
+content-type: application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+
+
+
+
+###
+GET http://localhost:8080/25-3-2023%20nutribarf/public_html/api/prueba2 HTTP/1.1
+content-type: application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+

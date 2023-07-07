@@ -1,0 +1,14 @@
+(()=>{"use strict";class i{_formdata;_url;_token;_opcion;_method;constructor(e="",a=1){this._token=e,this._opcion=a,this._method="POST"}setMethod(e){this._method=e}setFormData(e){this._formdata=e}setUrl(e){this._url=e}setOption(e){this._opcion=e,this._formdata.append("opcion",this._opcion)}async fetchDataAsync(){var e=this._token??this._token,a=r(3),e=await(await fetch(this._url,{headers:{Authorization:"Bearer "+e},method:this._method,body:this._formdata??this._formdata})).json();return await a.close(),e}}const r=(e,a=null,t=null)=>{let i="";var r=` 
+    <br>
+    <div class="lds-spinner" style="height: 13vh;">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </div>
+
+    `,o={confirmButtonText:null!==t?t:"aceptar",loaderHtml:r,imageWidth:100,imageHeight:100,html:a,showConfirmButton:!0};switch(e){case 0:o.html="Completa los campos REQUERIDOS.",i=Swal.fire(o);break;case 1:o.html="guardado OK",i=Swal.fire(o);break;case 2:o.html="error de conexion.",i=Swal.fire(o);break;case 3:o.html=r+"<br>procesando...",o.showConfirmButton=!1,i=Swal.fire(o);break;case 4:o.html="solo podes adjuntar un archivo. recargar la web para repetir.",i=Swal.fire(o);break;case 5:o.html="ya existe ese e-mail en BD. o no es un email valido.",i=Swal.fire(o);break;case 6:o.html="ERROR: no estas autenticado.",i=Swal.fire(o);break;case 7:i=Swal.fire(o);break;default:return i}return i};let o="";const n={home:(o="https://nutribarf.ar")+"/api",data:o+"/api/data",calendario:o+"/api/calendario",ingresar:o+"/api/ingresar",adjuntosDir:o+"/api/adjuntos"};var e=document.querySelector("form[class='formulario']");const s=document.querySelector("input[name='email']"),l=document.querySelector("input[name='pass']");e.addEventListener("submit",e=>{e.preventDefault();var e=new FormData,a=new i,t=[{email:s.value,pass:l.value}];e.append("data",JSON.stringify(t)),a.setFormData(e),a.setUrl(o+"/api/loginUser"),a.fetchDataAsync().then(e=>{1===e.response?(sessionStorage.setItem("token",e.token),window.location.href=n.data):r(6)})});const d=e=>`
+       Se envio un link para actualizar su contraseña a: <p> ${e}<p>
+    `;document.querySelector(".olvide-pass").addEventListener("click",()=>{r(7,`
+    <form class="confirmation-email-form">
+       <label>ingresa tu email</label>
+       <input type="email" required class="form-control" name="email-confirm"/>
+    </form>
+    `,"enviar confirmacion").then(e=>{if(!e.isConfirmed)return null;{let a=document.getElementsByName("email-confirm");a=a[0].value.trim(),console.log(a);var e=new FormData,t=new i;e.append("data",JSON.stringify({email:a})),t.setFormData(e),t.setUrl(o+"/api/email-update-password"),t.fetchDataAsync().then(e=>{r(7,d(a),"aceptar")})}})})})();

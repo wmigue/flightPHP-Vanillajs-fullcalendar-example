@@ -1,0 +1,1 @@
+(()=>{"use strict";let a="";const i={home:(a="https://nutribarf.ar")+"/api",data:a+"/api/data",calendario:a+"/api/calendario",ingresar:a+"/api/ingresar",adjuntosDir:a+"/api/adjuntos"};window.onload=()=>{setTimeout(()=>{window.location.href=i.ingresar},3e3)}})();

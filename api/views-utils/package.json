@@ -1,0 +1,33 @@
+{
+
+  "scripts": {
+    "gitlog":" git log --graph --oneline",
+    "webpack": "webpack",
+    "jest": "jest --clearCache && jest --verbose --no-cache --watch",
+    "jest-nowatch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --verbose --no-cache"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.5",
+    "@fullcalendar/daygrid": "^6.1.5",
+    "@fullcalendar/list": "^6.1.5",
+    "@fullcalendar/timegrid": "^6.1.5",
+    "@sweetalert2/theme-material-ui": "^5.0.15",
+    "fullcalendar": "^6.1.5",
+    "isomorphic-fetch": "^3.0.0",
+    "node-fetch": "^3.3.1",
+    "supertest": "^6.3.3",
+    "sweetalert2": "^11.7.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "uuid": "^9.0.0",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2"
+  },
+  "browser": {
+    "views-scripts": "../views-scripts"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0"
+  }
+}

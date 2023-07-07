@@ -1,0 +1,36 @@
+#open-button-wm{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+#links-menu-wm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
+    background-color: beige;
+    align-items: center;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    right: 1000;
+    z-index: 1000;
+    margin-bottom: -60px;
+    
+
+}
+
+.a-wm > p{
+    padding-left: 0px;
+    cursor: pointer;
+    color: black;
+}
+
+
+#user-menu-wm{
+    padding-left: 10px;
+}

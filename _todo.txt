@@ -1,0 +1,20 @@
+//editar los cron para que esten dentro de carpeta API.
+//editar eventos formulario
+
+
+
+
+FINISH:
+//notificaciones al ingresar de eventos proximos
+//desactivar usuario
+//agregar una mascota nueva
+//hacer responsive el CALENDARIO
+//modificar el header
+//imagen en el email
+//ELIMINAR USUARIOS DESDE ADMIN
+//input foto  al registrarse
+//borrar mascotas
+
+
+
+
